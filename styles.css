@@ -13,15 +13,15 @@ body {
   border: dashed red;
   background-color: lightcoral;
   border-radius: 20px;
-  color: rgb(100, 5, 5);
+  color: rgb(175, 33, 33);
   font-weight: bold;
 }
 
 h1 {
   width: 400px;
-  color: rgb(100, 5, 5);
+  color: rgb(175, 33, 33);
   text-align: center;
-  border: 4mm ridge rgba(199, 5, 5, 0.6);
+  border: 4mm ridge rgba(175, 33, 33, 0.6);
 }
 
 #ecran {
@@ -64,8 +64,28 @@ h1 {
   margin-bottom: 10px;
 }
 
+#titre-clavier-sci {
+  border: 1px red solid;
+  text-align: center;
+  padding: 5px;
+  margin-top: 5px;
+  color: rgb(175, 33, 33);
+}
+
+#titre-clavier-sci:hover {
+  background-color: rgb(223, 82, 82);
+}
+
+#titre-clavier-sci:active {
+  box-shadow: inset 2px 2px 2px 2px rgb(175, 33, 33);
+}
+
+#clavier_scientifique {
+  display: none;
+}
+
 #scientifique {
-  border-bottom: dashed red ;
+  border-bottom: dashed red;
 }
 
 .ligne {
@@ -95,5 +115,5 @@ h1 {
 }
 
 .touche:active {
-  box-shadow: inset 2px 2px 2px 2px rgb(100, 5, 5);
+  box-shadow: inset 2px 2px 2px 2px rgb(175, 33, 33);
 }

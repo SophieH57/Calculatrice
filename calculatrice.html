@@ -19,12 +19,24 @@
             <div id="resultat">0</div>
         </div>
         <div id="clavier">
-            <div class="ligne" id="scientifique">
-                <div class="touche touche_scientifique" onclick="carre()">x²</div>
-                <div class="touche touche_scientifique" onclick="inverse()">1/x</div>
-                <div class="touche touche_scientifique" onclick="operation('^')">x^y</div>
-                <div class="touche touche_scientifique" onclick="puissanceDix()">10^x</div>
-                <div class="touche touche_scientifique" onclick="absolu()">|x|</div>
+            <div id="titre-clavier-sci" onclick="afficherClavierSci()">Clavier scientifique</div>
+            <div id="clavier_scientifique">
+                <div class="ligne">
+                    <div class="touche touche_scientifique" onclick="pi()">&#960</div>
+                    <div class="touche touche_scientifique" onclick="carre()">x²</div>
+                    <div class="touche touche_scientifique" onclick="racine()">&#8730</div>
+                    <div class="touche touche_scientifique" onclick="inverse()">1/x</div>
+                    <div class="touche touche_scientifique" onclick="operation('^')">x^y</div>
+                    <div class="touche touche_scientifique" onclick="operation('mod')">mod</div>
+                </div>
+                <div class="ligne" id="scientifique">
+                    <div class="touche touche_scientifique" onclick="puissanceDix()">10^x</div>
+                    <div class="touche touche_scientifique" onclick="absolu()">|x|</div>
+                    <div class="touche touche_scientifique" onclick="trigo('cos')">cos</div>
+                    <div class="touche touche_scientifique" onclick="trigo('sin')">sin</div>
+                    <div class="touche touche_scientifique" onclick="trigo('tan')">tan</div>
+                    <div class="touche touche_scientifique" onclick="trigo('ln')">ln</div>
+                </div>
             </div>
             <div class="ligne" id="ligne1">
                 <div class="touche" id="ce" onclick="effacerEntree()">CE</div>
