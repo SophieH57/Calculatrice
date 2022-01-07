@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculatrice</title>
+    <link href="styles.css" rel="stylesheet" media="all" type="text/css"/>
+</head>
+<body>
+    <div id="calculatrice">
+        
+        <h1>Ma calculatrice</h1>
+        <div id="ecran">
+            <div id="calcul">
+                <div id="nombre"></div>
+                <div id="operateur"></div>
+            </div>
+            <div id="resultat">0</div>
+        </div>
+        <div id="clavier">
+            <div class="ligne" id="scientifique">
+                <div class="touche touche_scientifique" onclick="carre()">x²</div>
+                <div class="touche touche_scientifique" onclick="inverse()">1/x</div>
+                <div class="touche touche_scientifique" onclick="operation('^')">x^y</div>
+                <div class="touche touche_scientifique" onclick="puissanceDix()">10^x</div>
+                <div class="touche touche_scientifique" onclick="absolu()">|x|</div>
+            </div>
+            <div class="ligne" id="ligne1">
+                <div class="touche" id="ce" onclick="effacerEntree()">CE</div>
+                <div class="touche" id="c" onclick="effacerTout()">C</div>
+                <div class="touche" id="retour" onclick="effacerDernier()"><=</div>
+                <div class="touche" id="diviser" onclick="operation('/')">/</div>
+            </div>
+            <div class="ligne" id="ligne2">
+                <div class="touche" id="7" onclick="ajoutChiffre(7)">7</div>
+                <div class="touche" id="8" onclick="ajoutChiffre(8)">8</div>
+                <div class="touche" id="9" onclick="ajoutChiffre(9)">9</div>
+                <div class="touche" id="multiplier" onclick="operation('x')">x</div>
+            </div>
+            <div class="ligne" id="ligne3">
+                <div class="touche" id="4" onclick="ajoutChiffre(4)">4</div>
+                <div class="touche" id="5" onclick="ajoutChiffre(5)">5</div>
+                <div class="touche" id="6" onclick="ajoutChiffre(6)">6</div>
+                <div class="touche" id="soustraire" onclick="operation('-')">-</div>
+            </div>
+            <div class="ligne" id="ligne4">
+                <div class="touche" id="1" onclick="ajoutChiffre(1)">1</div>
+                <div class="touche" id="2" onclick="ajoutChiffre(2)">2</div>
+                <div class="touche" id="3" onclick="ajoutChiffre(3)">3</div>
+                <div class="touche" id="additionner" onclick="operation('+')">+</div>
+            </div>
+            <div class="ligne" id="ligne5">
+                <div class="touche" id="pos/neg" onclick="modifSigne()">+/-</div>
+                <div class="touche" id="0" onclick="ajoutChiffre(0)">0</div>
+                <div class="touche" id="virgule" onclick="ajoutVirgule()">.</div>
+                <div class="touche" id="égal" onclick="obtenirResultat()">=</div>
+            </div>
+
+        </div>
+    </div>
+        <script src="script.js"></script>
+</body>
+</html>
