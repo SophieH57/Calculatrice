@@ -15,19 +15,17 @@ function effacerTout() {
   resultat.textContent = "0";
   nombre.textContent = "";
   operateur.textContent = "";
-
 }
 
 function effacerEntree() {
-  resultat.textContent = "";
+  resultat.textContent = "0";
 }
 
 function effacerDernier() {
-  let newText = "";
-  for (i = 0; i < resultat.textContent.length - 1; i++) {
-    newText += resultat.textContent[i];
+  resultat.textContent = resultat.textContent.slice(0, resultat.textContent.length-1);
+  if (resultat.textContent.length == 0) {
+    resultat.textContent = "0";
   }
-  resultat.textContent = newText;
 }
 
 function ajoutVirgule() {
