@@ -12,9 +12,10 @@ function ajoutChiffre(chiffre) {
 }
 
 function effacerTout() {
-  resultat.textContent = "";
+  resultat.textContent = "0";
   nombre.textContent = "";
   operateur.textContent = "";
+
 }
 
 function effacerEntree() {
@@ -51,12 +52,11 @@ function ajoutVirgule() {
 
 function operation(signe) {
   if (operateur.textContent != "") {
-    alert("Vous ne pouvez effectuer qu'un opération à la fois!");
-  } else {
-    nombre.textContent = resultat.textContent;
-    operateur.textContent = signe;
-    resultat.textContent = "";
+    obtenirResultat();
   }
+  nombre.textContent = resultat.textContent;
+  operateur.textContent = signe;
+  resultat.textContent = "";
 }
 
 function round(number) {
@@ -68,29 +68,28 @@ function obtenirResultat() {
   let nombre1 = nombre.textContent;
   let nombre2 = resultat.textContent;
   if (operationTerminee) {
-    alert("L'opération est terminée!")
-  }
-  else {
+    alert("L'opération est terminée!");
+  } else {
     nombre.textContent +=
-    " " + operateur.textContent + " " + resultat.textContent + " = ";
+      " " + operateur.textContent + " " + resultat.textContent + " = ";
     operateur.textContent = "";
     operationTerminee = true;
     switch (operation) {
       case "+":
-      resultat.textContent = round( +nombre1 + +nombre2);
-      break;
+        resultat.textContent = round(+nombre1 + +nombre2);
+        break;
       case "-":
-      resultat.textContent = round(+nombre1 - +nombre2);
-      break;
+        resultat.textContent = round(+nombre1 - +nombre2);
+        break;
       case "x":
-      resultat.textContent = round(+nombre1 * +nombre2);
-      break;
+        resultat.textContent = round(+nombre1 * +nombre2);
+        break;
       case "/":
-      resultat.textContent = round(+nombre1 / +nombre2);
-      break;
+        resultat.textContent = round(+nombre1 / +nombre2);
+        break;
       case "^":
-      resultat.textContent = round((+nombre1) ** +nombre2);
-      break;
+        resultat.textContent = round((+nombre1) ** +nombre2);
+        break;
     }
   }
 }
